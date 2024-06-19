@@ -1,59 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
+:root{
   --starship: #F3DB4C;
-  --mineShaft: #343434;
+  --mineshaft: #343434;
   --husk: #B2A443;
   --sycamore: #94843C;
   --white: #fff;
-  --max-width: 1440px;
+  --max-width: 1400px;
   --padding: 8px;
   --margin: 10px;
-  --border-radius: 10px;
+  --borde-radius: 8px;
   --transition: 1s;
   --font-size: 16px;
 }
 
-::selection {
+::selection{
   background: var(--starship);
   color: var(--white);
 }
 
-body {
-  background: var(--mineShaft);
+body{
+  background: var(--mineshaft);
   color: var(--white);
   font-size: var(--font-size);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 24px;
 }
 
 header{
   text-align: center;
-  background: var(--mineShaft);
+  background: var(--mineshaft);
   color: var(--starship);
   border-bottom: solid 1px var(--husk);
   padding: var(--padding);
-  margin-bottom: var(--margin);
+  margin-bottom: var(--padding);
 }
-
 
 section{
   padding: var(--padding);
-
 }
 
-a{
+a, .list__item{
   color: var(--starship);
   text-decoration: none;
 }
 
-h1 , h2{
+h1, h2{
   padding: var(--padding);
 }
 
@@ -61,30 +58,24 @@ p{
   font-size: 1rem;
   margin: 0 0 var(--margin);
   color: var(--white);
-
 }
 
 p::first-letter{
   font-size: 1.4rem;
   color: var(--starship);
   font-weight: bold;
-
 }
 
 ul{
   list-style: none;
 }
 
-ul > li {
-  cursor: pointer;
-}
-
-ul.list > li.item{
+.list__item {
   cursor: pointer;
 }
 
 li.item:hover a{
-  color: var(--mineShaft);
+  color: var(--sycamore);
 }
 
 .container{
@@ -100,16 +91,15 @@ li.item:hover a{
 
 .search__form{
   border: solid 1px var(--starship);
-  border-radius: var(--border-radius);
-  padding: var(--padding);
+  border-radius: var(--borde-radius);
   margin-bottom: var(--margin);
+  padding: var(--padding);
   display: inline-grid;
   justify-content: end;
   grid-template-columns: auto 40px;
   grid-template-rows: auto;
-
+  gap: 4px;
 }
-
 
 .input{
   width: 100%;
@@ -117,12 +107,12 @@ li.item:hover a{
   outline: none;
   border: solid 1px var(--starship);
   font-size: 1rem;
-  color: var(--mineShaft);
 }
+
 .card{
   width: 450px;
   border: solid 1px var(--husk);
-  border-radius: var(--border-radius);
+  border-radius: var(--borde-radius);
   margin: 0 auto;
 }
 
@@ -131,8 +121,8 @@ li.item:hover a{
 }
 
 .card__title{
-  padding: var(--padding);
-  word-break: break-all;
+  text-wrap: wrap;
+  word-wrap: break-word
 }
 
 .card__body{
@@ -150,45 +140,40 @@ li.item:hover a{
 .button{
   padding: var(--padding);
   background: var(--starship);
-  color: var(--mineShaft);
-  border-radius: var(--border-radius);
+  color: var(--mineshaft);
+  border-radius: var(--borde-radius);
   border: solid 0.5px var(--starship);
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  /* width: 250px; */
   display: inline-flex;
   justify-content: space-between;
-  align-items: center;
-  transition: var(--transition) ;
+  align-items: center ;
+  transition: var(--transition);
 }
 
 .button--icon{
   justify-content: center;
-  align-items: center;
 }
 
-.button__text{
-
-}
+.button__text{}
 
 .button__icon{
   font-size: 1.4rem;
 }
 
 .button--outline{
-  background: var(--mineShaft);
+  background: var(--mineshaft);
   color: var(--starship);
 }
 
-
 .button:hover{
-  background: var(--mineShaft);
+  background: var(--mineshaft);
   color: var(--starship);
 }
 
 .button--outline:hover{
-  color: var(--mineShaft);
   background: var(--starship);
+  color: var(--mineshaft);
 }
 
 .list{
@@ -197,22 +182,18 @@ li.item:hover a{
 }
 
 .list__item{
-  border-bottom: solid 1px var(--sycamore);
+  border-bottom: solid 1px var(--husk);
   padding: var(--padding);
   transition: var(--transition);
-  font-size: 1.5rem;
-
+  font-size: 1.2rem;
 }
 
-
 .list__item:hover{
-  background: var(--husk);
+  background: var(--sycamore);
   color: var(--white);
 }
 
-
-ul.list > li.list__iten:last-child{
-
+ul.list>li.list__item:last-child{
   border-bottom: none;
 }
 
@@ -222,3 +203,6 @@ ul.list > li.list__iten:last-child{
   gap: 10px;
 }
 
+div.card > ul.list > li.list__item > a:visited{
+  color: var(--sycamore);
+}
