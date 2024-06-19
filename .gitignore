@@ -1,1 +1,4 @@
 node_modules/
+
+#Ignoramos el archivo de configuracion
+.env
