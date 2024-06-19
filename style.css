@@ -93,6 +93,32 @@ li.item:hover a{
   padding: 0 var(--padding);
 }
 
+.search{
+  display: flex;
+  justify-content: end;
+}
+
+.search__form{
+  border: solid 1px var(--starship);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  margin-bottom: var(--margin);
+  display: inline-grid;
+  justify-content: end;
+  grid-template-columns: auto 40px;
+  grid-template-rows: auto;
+
+}
+
+
+.input{
+  width: 100%;
+  padding: var(--padding);
+  outline: none;
+  border: solid 1px var(--starship);
+  font-size: 1rem;
+  color: var(--mineShaft);
+}
 .card{
   width: 450px;
   border: solid 1px var(--husk);
@@ -134,6 +160,11 @@ li.item:hover a{
   justify-content: space-between;
   align-items: center;
   transition: var(--transition) ;
+}
+
+.button--icon{
+  justify-content: center;
+  align-items: center;
 }
 
 .button__text{
@@ -178,3 +209,16 @@ li.item:hover a{
   background: var(--husk);
   color: var(--white);
 }
+
+
+ul.list > li.list__iten:last-child{
+
+  border-bottom: none;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
